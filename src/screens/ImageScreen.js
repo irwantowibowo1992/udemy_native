@@ -13,9 +13,9 @@ import ImageDetail from '../component/ImageDetail';
 const ImageScreen = ({navigation}) => {
   return (
     <View>
-      <ImageDetail />
-      <ImageDetail />
-      <ImageDetail />
+      <ImageDetail title="Forest" />
+      <ImageDetail title="Mountain" />
+      <ImageDetail title="Flowers" />
     </View>
   );
 };

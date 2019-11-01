@@ -1,10 +1,12 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-const ImageDetailScreen = () => {
+const ImageDetailScreen = props => {
+  console.log(props);
+
   return (
     <View>
-      <Text>Image Detail</Text>
+      <Text>{props.title}</Text>
     </View>
   );
 };

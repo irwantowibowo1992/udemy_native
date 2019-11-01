@@ -1,4 +1,6 @@
-Maksud dari parent-child relationship ini adalah kita menghubungkan screen menggunakan import.
+Kita dapat mengambil suatu data yang dikirimkan dari parent dengan menggunakan "props". Contohnya adalah seperti berikut
+
+### ImageScreen.js
 
 ```javascript
 import ImageDetail from '../component/ImageDetail';
@@ -9,6 +11,20 @@ const ImageScreen = ({navigation}) => {
       <ImageDetail />
       <ImageDetail />
       <ImageDetail />
+    </View>
+  );
+};
+```
+
+###ImageDetail.js
+
+```javascript
+const ImageDetailScreen = props => {
+  console.log(props);
+
+  return (
+    <View>
+      <Text>{props.title}</Text>
     </View>
   );
 };
