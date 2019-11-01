@@ -1,4 +1,4 @@
-Destructing Props di sini adalah kita akan menyederhanakan syntax kita dari `props.navigation.navigat` menjadi `navigation.navigate`.
+Destructing Props di sini adalah kita akan menyederhanakan syntax kita dari `props.navigation.navigate` menjadi `navigation.navigate`.
 Cara yang dapat kita lakukan adalah sebagai berikut:
 
 ```javascript
