@@ -1,6 +1,13 @@
-Maksud dari parent-child relationship ini adalah kita menghubungkan screen menggunakan import.
+import React from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  FlatList,
+  TouchableOpacity,
+} from 'react-native';
 
-```javascript
 import ImageDetail from '../component/ImageDetail';
 
 const ImageScreen = ({navigation}) => {
@@ -12,4 +19,7 @@ const ImageScreen = ({navigation}) => {
     </View>
   );
 };
-```
+
+const styles = StyleSheet.create({});
+
+export default ImageScreen;
