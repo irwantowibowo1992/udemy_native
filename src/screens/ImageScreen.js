@@ -14,8 +14,8 @@ const ImageScreen = ({navigation}) => {
   return (
     <View>
       <ImageDetail title="Forest" />
+      <ImageDetail title="Beach" />
       <ImageDetail title="Mountain" />
-      <ImageDetail title="Flowers" />
     </View>
   );
 };
