@@ -6,7 +6,7 @@ const ImageDetailScreen = props => {
 
   return (
     <View>
-      <Image source={require('../../assets/beach.jpg')} />
+      <Image source={props.imageSource} />
       <Text>{props.title}</Text>
     </View>
   );
