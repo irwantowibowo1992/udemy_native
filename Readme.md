@@ -1,5 +1,21 @@
-Untuk membuat navigasi supaya bisa berpindah screen maka kita bisa gunakan properti navigasi pada onPress kita contohnya seperti ini :
+Destructing Props di sini adalah kita akan menyederhanakan syntax kita dari `props.navigation.navigat` menjadi `navigation.navigate`.
+Cara yang dapat kita lakukan adalah sebagai berikut:
 
-```
-    onPress={ () => props.navigation.navigate('Components') }
+```javascript
+const HomeScreen = ({navigation}) => {
+  return (
+    <View>
+      <Text style={styles.text}>Home Screen</Text>
+      <Button
+        onPress={() => navigation.navigate('Components')}
+        title="Go To Component"
+      />
+
+      <Button
+        title="Got To Lists Demo"
+        onPress={() => navigation.navigate('List')}
+      />
+    </View>
+  );
+};
 ```
