@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, Button} from 'react-native';
+import {View, Text, StyleSheet, Button, FlatList} from 'react-native';
 
 const ColorScreen = () => {
   const [colors, setColors] = useState([]);
@@ -27,7 +27,7 @@ const ColorScreen = () => {
         data={colors}
         renderItem={({item}) => {
           return (
-            <View style={{height: 100, width: 100, backgroundColor: item}} />
+            <View style={{height: 110, width: 110, backgroundColor: item}} />
           );
         }}
       />
