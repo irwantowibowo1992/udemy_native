@@ -1,28 +1,20 @@
-## Generate Random Color Action
+## Menambahkan Random Color
 
-1. Buat view untuk menampung color nya
+1. Import `useState`
+   sudah dijelaskan di pembahasan sebelumnya jika `useState` ini adalah Hooks
 
-```javascript
-<View
-  style={{
-    height: 100,
-    width: 100,
-    backgroundColor: 'rgb(0, 255, 0)',
-  }}></View>
-```
+2. Kemudian deklarasikan variabel untuk menampun data color dan setState colornya
+   `const [colors, setColors] = useState([]);`
 
-2. Buat function untuk generate random color nya
+3. Kita modifikasi button add color dengan menambahkan function setColor di action onPress
 
 ```javascript
-const randomRgb = () => {
-  const red = Math.floor(Math.random() * 256);
-  const green = Math.floor(Math.random() * 256);
-  const blue = Math.floor(Math.random() * 256);
-
-  return `rgb(${red}, ${green}, ${blue})`;
-};
+<Button
+  title="Add Color"
+  onPress={() => {
+    setColors([...colors, randomRgb()]);
+  }}
+/>
 ```
 
-3. Di view nomer 1 pada bagian backgroundColor kita letakkan function randomRgb kita dari yang semula `backgroundColor: 'rgb(0, 255, 0)'` menjadi `backgroundColor: randomRgb()`
-
-function `randomRgb` ini akan menggenerate color secara random, jadi setiap kali dirender maka akan warna yang dihasilkan akan berbeda
+`...colors` berfungsi untuk meng-copy isi data yang ada di variabel `const[colors, setColors]` yang mana setiap button add color ditekan maka nilai `colors` akan bertambah datanya dan akan dicopy oleh `...colors` tersebut. Jika kita console maka data array color akan selalu bertambah setiap button add color kita tekan
