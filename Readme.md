@@ -17,4 +17,6 @@
 />
 ```
 
+Saat pertama kali dijalankan maka nilai array akan kosong ( `useState([])` )
+
 `...colors` berfungsi untuk meng-copy isi data yang ada di variabel `const[colors, setColors]` yang mana setiap button add color ditekan maka nilai `colors` akan bertambah datanya dan akan dicopy oleh `...colors` tersebut. Jika kita console maka data array color akan selalu bertambah setiap button add color kita tekan
