@@ -1,20 +1,20 @@
-## Menambahkan Random Color
+## Menampilkan List Colors Yang Telah Dibuat
 
-1. Import `useState`
-   sudah dijelaskan di pembahasan sebelumnya jika `useState` ini adalah Hooks
+Mari kita tampilkan color yang talah dibuat/ditambahkan dengan menggunkana FlatList.
 
-2. Kemudian deklarasikan variabel untuk menampun data color dan setState colornya
-   `const [colors, setColors] = useState([]);`
-
-3. Kita modifikasi button add color dengan menambahkan function setColor di action onPress
+Tambahkan kode berikut di di bawah list random color.
 
 ```javascript
-<Button
-  title="Add Color"
-  onPress={() => {
-    setColors([...colors, randomRgb()]);
+<FlatList
+  keyExtractor={item => item}
+  data={colors}
+  renderItem={({item}) => {
+    return <View style={{height: 100, width: 100, backgroundColor: item}} />;
   }}
 />
 ```
+<<<<<<< Updated upstream
 
 `...colors` berfungsi untuk meng-copy isi data yang ada di variabel `const[colors, setColors]` yang mana setiap button add color ditekan maka nilai `colors` akan bertambah datanya dan akan dicopy oleh `...colors` tersebut. Jika kita console maka data array color akan selalu bertambah setiap button add color kita tekan
+=======
+>>>>>>> Stashed changes
