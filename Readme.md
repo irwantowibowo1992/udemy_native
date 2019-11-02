@@ -1,39 +1,58 @@
-Kita bisa memodifikasi props yang kita gunakan untuk mengakses properti dari parent. Jika sebelumnya kita mengakses properti dengan menggunakan kata kunci "props", misalnya saja ` {props.imageSource}``. kita bisa membuatnya menjadi `{imageSource}``` saja dengan cara seperti berikut
+## Action State Increase Decrease
 
-### ImageScreen.js
+1. Buat Button untu Increase dan Decrease
+
+```javascript
+    <Button title="Increase" />
+    <Button title="Decrease" />
+```
+
+2. Buat variabel dan set angka awal dengan 0
+   `let counter = 0;`
+
+3. Ubah button nya seperti kode berikut
+
+```javascript
+    <Button
+        title="Increase"
+        onPress={() => {
+            counter++;
+            console.log(counter);
+        }}
+        />
+        <Button
+        title="Decrease"
+        onPress={() => {
+            counter--;
+            console.log(counter);
+        }}
+    />
+```
+
+Sejauh ini juka kita tekan button increase ataupun decrease maka di console sudah berjalan, namun untuk tampilannya belum jalan. mari kita modifikasi supaya hasilnya bisa ditampilkan di layar
+
+4. Import useState dari react
+   `import React, {useState} from 'react';`
+   `useState` ini adalah Hooks. `useState di` panggil dalam function component untuk menambahkan suatu state lokal dimana `useState` memberikan dua nilai yaitu nilai state saat ini dan fungsi untuk memperbaharui nilai tersebut ( `const [counter, setCounter] = useState(0);` ). Bagian `useState(0)` artinya adalah kita memberikan nilai awal yaitu 0.
+
+5. Kemudian ubah kode buttonnya dengan mengganti nilai counter++ dan counter-- dengan funsi `setCounter` nya.
 
 ```javascript
 <View>
-  <ImageDetail
-    title="Forest"
-    imageSource={require('../../assets/forest.jpg')}
-    score={9}
+  <Button
+    title="Increase"
+    onPress={() => {
+      setCounter(counter + 1);
+    }}
   />
-  <ImageDetail
-    title="Beach"
-    imageSource={require('../../assets/beach.jpg')}
-    score={7}
+  <Button
+    title="Decrease"
+    onPress={() => {
+      setCounter(counter - 1);
+    }}
   />
-  <ImageDetail
-    title="Mountain"
-    imageSource={require('../../assets/mountain.jpg')}
-    score={4}
-  />
+  <Text>Current Count: {counter} </Text>
 </View>
 ```
 
-### ImageDetail.js
-
-```javascript
-const ImageDetailScreen = ({imageSource, title, score}) => {
-  return (
-    <View style={styles.imageContainer}>
-      <Image source={imageSource} />
-      <Text>{title}</Text>
-      <Text>Image Score - {score}</Text>
-    </View>
-  );
-};
-```
-
-jadi kita mendefinisikan properti yang ingin diambil menjadi satu props kemudian tinggal kita panggil menggunakan nama propertinya saja tanpa menggunakan "props"
+Jadi setiap button baik itu Increase maupun Decrease ditekan makan nilai counter akan berubah dan component akan ter-render ulang.
