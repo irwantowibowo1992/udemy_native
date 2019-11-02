@@ -29,11 +29,11 @@
     />
 ```
 
-Sejauh ini juka kita tekan button increase ataupun decrease maka di console sudah berjalan, namun untuk tampilannya belum jalan. mari kita modifikasi supaya hasilnya bisa ditampilkan di layar
+Sejauh ini jika kita tekan button increase ataupun decrease maka di console sudah berjalan, namun untuk tampilannya belum jalan. mari kita modifikasi supaya hasilnya bisa ditampilkan di layar
 
 4. Import useState dari react
    `import React, {useState} from 'react';`
-   `useState` ini adalah Hooks. `useState di` panggil dalam function component untuk menambahkan suatu state lokal dimana `useState` memberikan dua nilai yaitu nilai state saat ini dan fungsi untuk memperbaharui nilai tersebut ( `const [counter, setCounter] = useState(0);` ). Bagian `useState(0)` artinya adalah kita memberikan nilai awal yaitu 0.
+   `useState` ini adalah Hooks. `useState` di panggil dalam function component untuk menambahkan suatu state lokal dimana `useState` memberikan dua nilai yaitu nilai state saat ini dan fungsi untuk memperbaharui nilai tersebut ( `const [counter, setCounter] = useState(0);` ). Bagian `useState(0)` artinya adalah kita memberikan nilai awal yaitu 0.
 
 5. Kemudian ubah kode buttonnya dengan mengganti nilai counter++ dan counter-- dengan funsi `setCounter` nya.
 
