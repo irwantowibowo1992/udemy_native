@@ -1,15 +1,5 @@
-## Menampilkan Data Color Dengan FlatList
+## Membuat Boilerplate Untuk Menambahkan Warna
 
-Tambahkan kode berikut setelah view randomColor
+<img src = "https://onedrive.live.com/?cid=C41DE37CD80BC613&id=C41DE37CD80BC613%21144429&parId=C41DE37CD80BC613%21144425&o=OneUp" />
 
-```javascript
-<FlatList
-  keyExtractor={item => item}
-  data={colors}
-  renderItem={({item}) => {
-    return <View style={{height: 100, width: 100, backgroundColor: item}} />;
-  }}
-/>
-```
-
-kode tersebut akan menampilkan setiap list yang ditambahkan
+Kali ini kita akan membuat sebuah fungsi yang mana fungsi tersebut dapat menambahkan warna dan mengurangi warna, baik warna merah, hijau maupun biru
